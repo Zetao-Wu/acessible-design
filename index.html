@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="index.js"></script>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#inputs">Inputs</a></li>
+            <li><a href="#outputs">Outputs</a></li>
+            <li><a href="#state-models">State Models</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+            <li><a href="#revised-component">Revised Component</a></li>
+        </ul>
+    </nav>
+    <div class="section-container">
+        <section id="inputs">
+            <h1>Inputs</h1>
+            <h2>User Interface of 3 Applications</h2>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="/accessible_component/assets/google_drive.png" alt="Image of Google Drive">
+                    <img src="/accessible_component/assets/youtube.png" alt="Image of Youtube">
+                    <img src="/accessible_component/assets/unity.png" alt="Image of Unity">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+            <h2>Reflection Questions</h2>
+
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">What is the process of interacting with each component like? What's
+                        different? </button>
+                    <div class="accordion-content">
+                        <p>In each application, when the mouse hovers above the dropdown component or when the Tab key
+                            selects that component, the component be highlighted to show that the component is
+                            selectable. Some difference are noticeable like for Google Drive, when I hovered over the
+                            component there is a text that pops up, indicating the functionality of the component. This
+                            was not implemented for YouTube or Unity.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">What are all the functions the component can do (or can’t do)?
+                        Don't be afraid to try things! For example, some questions you could think about: what happens
+                        when you drag and drop text from the component, can you select part of a label of a radio
+                        button? What happens when you hit Esc or PageUp while typing, will Ctrl-C copy from a popup
+                        dialog, or hold down an arrow key while a menu is open?</button>
+                    <div class="accordion-content">
+                        <p>The component supports various interactive functionalities, including opening and closing via
+                            clicking the dropdown button, pressing Space or Enter, clicking outside the button, or
+                            pressing Esc. Navigation is possible using up/down arrow keys, scrolling, hovering to
+                            highlight options, and using Tab to move through items. Selection can be done by
+                            left-clicking, right-clicking for more options, or pressing Enter. However, the component
+                            does not support drag-and-drop, selecting partial text, copy-pasting, or adding text.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">Apply the considerations from class: what functionalities of the
+                        component are learnable, memorable, efficient?</button>
+                    <div class="accordion-content">
+                        <p>
+                            The component is learnable through hover states that indicate selectability, intuitive UI
+                            with clear headers, and a scrollbar for additional options. It is memorable due to frequent
+                            interaction across various applications and predictable functionality that allows users to
+                            navigate instinctively. In terms of efficiency, it requires only a simple click to open and
+                            close, eliminates the need for page relocation, and uses logical sorting to help users
+                            quickly find the desired option.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Comparing component across the 3 applications in terms of input accessibility</h2>
+            <img src="/accessible_component/assets/input_graph.png" alt="Graph of input" class="input-graph">
+        </section>
+
+        <section id="outputs">
+            <h1>Outputs</h1>
+            <h2>Output Differences Cues for Changing State</h2>
+            <img src="/accessible_component/assets/output_diff.png"
+                alt="Graph of output difference between applications" class="output-graph">
+            <h2>Focus Order</h2>
+            <img src="/accessible_component/assets/focus_order.png" alt="Graph of focus order between applications"
+                class="output-graph">
+            <h2>Screen Reader</h2>
+            <img src="/accessible_component/assets/screen_reader.png"
+                alt="Graph of screen_reader difference between applications" class="output-graph">
+        </section>
+
+        <section id="state-models">
+            <h1>State Models</h1>
+            <h2>Component Design (Mouse) Before VS After</h2>
+            <div class="state-models-compare">
+                <img src="/accessible_component/assets/mouse_before.png" alt="Graph of mouse states before modification"
+                    class="modified-graph">
+                <img src="/accessible_component/assets/mouse_after.png" alt="Graph of mouse states after modification"
+                    class="modified-graph">
+            </div>
+
+            <h2>Component Design (Keyboard) Before VS After</h2>
+            <div class="state-models-compare">
+                <img src="/accessible_component/assets/key_before.png"
+                    alt="Graph of keyboard states before modification" class="modified-graph">
+                <img src="/accessible_component/assets/key_after.png" alt="Graph of keyboard states after modification"
+                    class="modified-graph">
+            </div>
+
+            <h2>Revised Application for Unity Initial VS Mouse Hover</h2>
+            <div class="state-models-compare">
+                <img src="/accessible_component/assets/initial-state.png"
+                    alt="Picture of dropdown menu during default for unity" class="redesign-state">
+                <img src="/accessible_component/assets/hover-state.png"
+                    alt="Picture of dropdown menu after revised for unity" class="redesign-state">
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">How new component affects Learnability? </button>
+                    <div class="accordion-content">
+                        <p>Larger hover space for user to work on because we included the profile icon as well and easy
+                            to learn because if you can just hover over the dropdown icon and pick the option you want
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">How new component affects Memorability? </button>
+                    <div class="accordion-content">
+                        <p>Here we keep standard practices followed by other applications including clicking out the
+                            dropdown to close and click an option to select. We can also include a fading animtion to
+                            increase memorability</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">How new component affects Efficiency? </button>
+                    <div class="accordion-content">
+                        <p>Larger clickable and hovering space so user does not have to be extremely precise and sticky
+                            dropdown so the user does not need to keep within the dropdown</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How new component affects Accessibility? </button>
+                    <div class="accordion-content">
+                        <p>Here we get clearer visual vues, which includes making icons and arrows bigger. Also, the
+                            arrow hover
+                            color is different so that it can be seen better in contrast with the background.
+                            Furthermore, the
+                            sticky menu design prevents closure of the dropdown on accident so people with shaky hands
+                            or related problems can take their time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reflections">
+            <h1>Reflections</h1>
+            <img src="/accessible_component/assets/reflection1.png" alt="Image of reflection part 1"
+                class="reflection-img">
+            <img src="/accessible_component/assets/reflection2.png" alt="Image of reflection part2"
+                class="reflection-img">
+        </section>
+
+        <section id="revised-component">
+            <h1>Revised Component</h1>
+
+            <div class="profile-container">
+                <div class="profile" id="profile">
+                    <div class="avatar">ZW</div>
+                    <div class="dropdown-arrow" id="dropdown-arrow">&#9662;</div>
+                </div>
+
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <ul>
+                        <li>Account settings</li>
+                        <li>Unity Cloud</li>
+                        <li>Manage licenses</li>
+                        <li>Manage organizations</li>
+                        <li>Account help</li>
+                        <li>Send feedback</li>
+                        <li>Troubleshooting</li>
+                        <li>Sign out</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4>Essentially, when we hover over the dropdown arrow or the account profile, we will trigger a preview of
+                the dropdown. If user clicks on the dropdown arrow the dropdown will stick. If the user directly goes
+                into the dropdown box, the dropdown content will also stick and the user will still be able to use it,
+                even if they did not click on the dropdown arrow in the first place. If they do not click on the arrow,
+                or scroll somewhere else that is not the dropdown, the dropdown will disappear. Also, when hovered our
+                dropdown is triggered, the dropdown arrow becomes blue for better visibility.</h4>
+
+
+        </section>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
